@@ -12,4 +12,5 @@ for i in range(1, n + 1):
             else:
                 q.append(i)
                 q.append(j)
-print(q)
+
+print(n,'-', *(q))
