@@ -1,11 +1,10 @@
 class Animal:
+    alive = True
+    fed = False
     def __init__(self, name):
         self.name = name
-        self.alive = True
-        self.fed = False
 
     def eat(self, food):
-        Plant.edible = food
         if isinstance(food, Plant) and food.edible:
             print(f'{self.name} съел {food.name}')
             self.fed = True
@@ -14,9 +13,10 @@ class Animal:
             self.alive = False
 
 class Plant:
+    edible = False
     def __init__(self, name):
         self.name = name
-        self.edible = False
+
 
 class Mammal(Animal):
     pass
@@ -28,9 +28,10 @@ class Flower(Plant):
     pass
 
 class Fruit(Plant):
+    edible = True
     def __init__(self, name):
         self.name = name
-        self.edible = True
+
     pass
 
 
