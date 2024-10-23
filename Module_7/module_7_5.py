@@ -1,11 +1,11 @@
 import os
 import time
 
-directory = r'C:\Users\User\PycharmProjects\pythonProject\Module_7'
+directory = os.getcwd()
 for root, dirs, files in os.walk(directory):
 
     for file in files:
-        filepath = os.path.join(file)
+        filepath = os.path.join(root, file)
 
         filetime = os.stat(file).st_mtime
 
