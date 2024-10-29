@@ -3,8 +3,7 @@ class Car:
         self.model = model
         if self.__is_valid_vin(__vin):
             self.vin = self.__is_valid_vin(__vin)
-        if self.__is_valid_numbers(__numbers):
-            self.numbers = self.__is_valid_numbers(__numbers)
+        self.numbers = self.__is_valid_numbers(__numbers)
 
     def __is_valid_vin(self, vin_number):
         self.vin_number = vin_number
