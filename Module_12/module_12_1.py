@@ -18,11 +18,12 @@ class Runner:
 
 
 class RunnerTest(TestCase):
+    is_frozen = False
     def test_walk(self):
-        walker = Runner('Name')
+        runner = Runner('Name')
         for i in range(10):
-            walker.walk()
-        self.assertEqual(walker.distance, 50)
+            runner.walk()
+        self.assertEqual(runner.distance, 50)
 
     def test_run(self):
         runner = Runner('Name')

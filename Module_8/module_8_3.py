@@ -17,7 +17,6 @@ class Car:
         return True
 
     def __is_valid_numbers(self, numbers):
-        self.__numbers = numbers
 
         if not isinstance(numbers, str):
             raise IncorrectCarNumbers('Некорректный тип данных для номеров')
